@@ -1,0 +1,4 @@
+repository "2048/FunGame@13469852178018@cloud"
+  path "/"
+    br "/main"
+    co "/main"
