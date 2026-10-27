@@ -8,7 +8,7 @@ public class CarController : MonoBehaviour
 
     void Update()
     {
-        float horizontalInput = Input.GetAxisRaw("Horizontal");
+        float horizontalInput = Input.GetAxis("Horizontal");
         Vector3 movement = Vector3.right * horizontalInput * steerSpeed * Time.deltaTime;
         transform.position += movement;
         float xPosition = Mathf.Clamp(transform.position.x, -roadLimit, roadLimit);
