@@ -4,12 +4,12 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - Traffic
+  - Vehicle
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Traffic
+  - 
   - Water
   - UI
   - 
