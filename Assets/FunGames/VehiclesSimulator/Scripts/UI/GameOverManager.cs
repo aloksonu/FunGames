@@ -10,7 +10,7 @@ public class GameOverManager : MonoBehaviour
 
     void Start()
     {
-        Time.timeScale = 1f;
+       
 
         if (gameOverPanel != null)
             gameOverPanel.SetActive(false);
