@@ -4,8 +4,8 @@ using UnityEngine.SceneManagement;
 public class GameOverUIManager : MonoBehaviour
 {
     public GameObject gameOverPanel;
-    public AudioClip crashSound;
-    public AudioSource audioSource;
+    //public AudioClip crashSound;
+   // public AudioSource audioSource;
     public bool isGameOver;
 
     public void GameOver()
@@ -13,7 +13,7 @@ public class GameOverUIManager : MonoBehaviour
         if (isGameOver) { return; }
         isGameOver = true;
 
-        audioSource.PlayOneShot(crashSound);
+      //  audioSource.PlayOneShot(crashSound);
 
         gameOverPanel.SetActive(true);
         Time.timeScale = 0;

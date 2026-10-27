@@ -10,6 +10,7 @@ public class ControlSelectionManager : MonoBehaviour
 
     public SteeringWheelUI steeringWheelController;
     public SteeringUI buttonController;
+    public GyroCarController gyroController;
 
     void Start()
     {
@@ -19,6 +20,8 @@ public class ControlSelectionManager : MonoBehaviour
         steeringWheel.SetActive(false);
         leftButton.SetActive(false);
         rightButton.SetActive(false);
+
+        gyroController.DisableGyro();
     }
 
     public void SelectSteeringWheel()
@@ -29,6 +32,7 @@ public class ControlSelectionManager : MonoBehaviour
 
         steeringWheelController.SetControlsEnabled(true);
         buttonController.SetControlsEnabled(false);
+        gyroController.DisableGyro();
 
         StartGame();
     }
@@ -41,6 +45,20 @@ public class ControlSelectionManager : MonoBehaviour
 
         steeringWheelController.SetControlsEnabled(false);
         buttonController.SetControlsEnabled(true);
+        gyroController.DisableGyro();
+
+        StartGame();
+    }
+
+    public void SelectGyro()
+    {
+        steeringWheel.SetActive(false);
+        leftButton.SetActive(false);
+        rightButton.SetActive(false);
+
+        steeringWheelController.SetControlsEnabled(false);
+        buttonController.SetControlsEnabled(false);
+        gyroController.EnableGyro();
 
         StartGame();
     }

@@ -29,6 +29,6 @@ public class CarController : MonoBehaviour
 
     public void SetSteering(float input)
     {
-        steeringInput = -input;
+        steeringInput = input;
     }
 }
