@@ -1,23 +1,35 @@
 
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 public class SteeringUI : MonoBehaviour
 {
     public CarController carController;
 
+    private bool controlsEnabled;
+
+    public void SetControlsEnabled(bool enabled)
+    {
+        controlsEnabled = enabled;
+
+        if (!enabled)
+            carController.SetSteering(0f);
+    }
+
     public void SteerLeft()
     {
-        carController.SetSteering(-1f);
+        if (controlsEnabled)
+            carController.SetSteering(-1f);
     }
 
     public void SteerRight()
     {
-        carController.SetSteering(1f);
+        if (controlsEnabled)
+            carController.SetSteering(1f);
     }
 
     public void StopSteering()
     {
-        carController.SetSteering(0f);
+        if (controlsEnabled)
+            carController.SetSteering(0f);
     }
 }
