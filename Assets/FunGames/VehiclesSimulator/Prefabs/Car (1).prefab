@@ -105,7 +105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a13c23b2ed9cbfe4e9b36352e86c8820, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrafficCar
-  moveSpeed: 5
+  moveSpeed: 10
   steerSpeed: 5
   destroyY: -8
   detectionRange: -5
